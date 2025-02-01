@@ -15,10 +15,8 @@ jobs:
       - name: Setup Firebase CLI
         run: npm install -g firebase-tools
 
-      - name: Authenticate with Firebase
-        run: |
-          echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TAVO_CE91B }}' > "$HOME/firebase-key.json"
-          export GOOGLE_APPLICATION_CREDENTIALS="$HOME/firebase-key.json"
+      - name: Extract ZIP file
+        run: unzip -o website.zip -d public || echo "No ZIP file found"
 
       - name: Deploy to Firebase Hosting
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
