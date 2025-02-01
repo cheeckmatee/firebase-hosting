@@ -1,0 +1,65 @@
+{
+    "Users": [
+      {
+        "id": 1,
+        "name": "Ahmed Ali",
+        "email": "ahmed@example.com",
+        "phone": "0123456789"
+      },
+      {
+        "id": 2,
+        "name": "Mona Hassan",
+        "email": "mona@example.com",
+        "phone": "01122334455"
+      }
+    ],
+    "Addresses": [
+      {
+        "id": 1,
+        "user_id": 1,
+        "address_line": "شارع النصر - المعادي",
+        "city": "القاهرة",
+        "latitude": 30.0444,
+        "longitude": 31.2357
+      },
+      {
+        "id": 2,
+        "user_id": 2,
+        "address_line": "شارع الجامعة - المهندسين",
+        "city": "الجيزة",
+        "latitude": 30.0123,
+        "longitude": 31.2098
+      }
+    ],
+    "Orders": [
+      {
+        "id": 101,
+        "user_id": 1,
+        "product": "بيتزا",
+        "quantity": 2,
+        "order_date": "2025-02-01T18:30:00"
+      },
+      {
+        "id": 102,
+        "user_id": 2,
+        "product": "شاورما",
+        "quantity": 1,
+        "order_date": "2025-02-01T19:15:00"
+      }
+    ],
+    "Payments": [
+      {
+        "id": 201,
+        "order_id": 101,
+        "amount": 200.50,
+        "payment_method": "Visa"
+      },
+      {
+        "id": 202,
+        "order_id": 102,
+        "amount": 50.00,
+        "payment_method": "Cash"
+      }
+    ]
+  }
+  

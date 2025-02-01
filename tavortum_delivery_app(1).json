@@ -1,0 +1,24 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"tavortum_delivery_app"},
+{"type":"table","name":"Addresses","database":"tavortum_delivery_app","data":
+[
+
+]
+}
+,{"type":"table","name":"Orders","database":"tavortum_delivery_app","data":
+[
+
+]
+}
+,{"type":"table","name":"Payments","database":"tavortum_delivery_app","data":
+[
+
+]
+}
+,{"type":"table","name":"Users","database":"tavortum_delivery_app","data":
+[
+
+]
+}
+]
