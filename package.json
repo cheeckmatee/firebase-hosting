@@ -3,3 +3,6 @@
     "firebase-admin": "^13.0.2"
   }
 }
+"scripts": {
+  "build": "echo 'No build step required' "
+}
