@@ -1,0 +1,242 @@
+/*=====================
+    Notification CSS start
+==========================*/
+.notification {
+  .notification-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+
+    .notification-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      border: 1px dashed rgba(var(--light-text), 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50px;
+        top: 21px;
+        width: 18px;
+        height: 1px;
+        background-color: rgba(var(--light-text), 1);
+
+        [dir="rtl"] & {
+          left: unset;
+          right: 50px;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 48px;
+        top: 36px;
+        width: 20px;
+        height: 1px;
+        background-color: rgba(var(--light-text), 1);
+
+        [dir="rtl"] & {
+          left: unset;
+          right: 48px;
+        }
+      }
+
+      span {
+        width: 42px;
+        height: 42px;
+        background-color: rgba(var(--box-bg), 1);
+        padding: 15px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 70px;
+          top: 19px;
+          transform: translate(-50%);
+          width: 5px;
+          height: 5px;
+          background-color: rgba(var(--light-text), 1);
+          border-radius: 100%;
+
+          [dir="rtl"] & {
+            left: unset;
+            right: 70px;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 70px;
+          top: 34px;
+          transform: translate(-50%);
+          width: 5px;
+          height: 5px;
+          background-color: rgba(var(--light-text), 1);
+          border-radius: 100%;
+
+          [dir="rtl"] & {
+            left: unset;
+            right: 70px;
+          }
+        }
+
+        .notification-img {
+          stroke: rgba(var(--light-text), 1);
+          width: 21px;
+          height: 21px;
+          border-radius: 100%;
+
+          &.img1 {
+            padding: 5px;
+          }
+        }
+      }
+    }
+
+    &.unread {
+      .notification-icon {
+        border: 1px dashed rgba(var(--theme-color), 1);
+
+        &::before {
+          background-color: rgba(var(--theme-color), 1);
+        }
+
+        &::after {
+          background-color: rgba(var(--theme-color), 1);
+        }
+
+        span {
+          background-color: rgba(var(--theme-color), 1);
+
+          &::before {
+            background-color: rgba(var(--theme-color), 1);
+          }
+
+          &::after {
+            background-color: rgba(var(--theme-color), 1);
+          }
+
+          .notification-img {
+            border: 1px solid rgba(255, 255, 255, 1);
+          }
+        }
+      }
+
+      .notification-content {
+        p {
+          color: rgba(var(--dark-text), 1);
+        }
+
+        h5 {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .notification-content {
+      width: calc(100% - 60px);
+      margin-left: 10px;
+      background: rgba(var(--white), 1);
+      border: 1px solid rgba(var(--black), 0.05);
+      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      padding: 12px 12px 12px 18px;
+
+      [dir="rtl"] & {
+        margin-left: unset;
+        margin-right: 10px;
+        padding: 12px 18px 12px 12px;
+      }
+
+      h5 {
+        color: rgba(var(--dark-text), 1);
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      h6 {
+        color: rgba(var(--light-text), 1);
+      }
+
+      p {
+        color: rgba(var(--light-text), 1);
+        border-top: 1px dashed rgba(var(--dashed-line), 1);
+        padding: 8px 0 0 0;
+        margin: 8px 0 0 0;
+      }
+    }
+  }
+}
+
+.notification-setting {
+  background: rgba(var(--white), 1);
+  border: 1px solid rgba(var(--black), 0.05);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding: 15px;
+
+  li {
+    display: block;
+    border-bottom: 1px solid rgba(var(--dashed-line), 0.5);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .notification {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 15px 0;
+
+      input[type="checkbox"] {
+        position: relative;
+        width: 37px;
+        height: 22px;
+        appearance: none;
+        background: rgba(var(--box-bg), 1);
+        outline: none;
+        border-radius: 50px;
+        cursor: pointer;
+
+        &:checked {
+          background: rgba(var(--theme-color), 0.1);
+
+          &::before {
+            transform: translateX(80%) translateY(-50%);
+            background: rgba(var(--theme-color), 1);
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background: rgba(var(--light-text), 1);
+          position: absolute;
+          top: 50%;
+          left: 5px;
+          transform: translateY(-50%);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  &.status-items {
+    border-bottom: 1px dashed rgba(var(--dashed-line), 1);
+  }
+}

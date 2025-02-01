@@ -1,0 +1,48 @@
+/*utils scss files */
+@import "utils/animation";
+@import "utils/variables";
+
+/* base scss files */
+@import "base/reset";
+@import "base/typography";
+
+/* components scss files*/
+@import "components/accordion";
+@import "components/button";
+@import "components/category";
+@import "components/chatting";
+@import "components/form";
+@import "components/offcanvas";
+@import "components/product-box";
+@import "components/ratio";
+@import "components/slider";
+@import "components/tabs";
+@import "components/title";
+
+/* layout scss files */
+@import "layout/header";
+@import "layout/nav";
+
+/* pages */
+@import "pages/address";
+@import "pages/authentication";
+@import "pages/cart";
+@import "pages/coupon";
+@import "pages/delivery-boy";
+@import "pages/details";
+@import "pages/empty-page";
+@import "pages/grocery";
+@import "pages/home";
+@import "pages/index";
+@import "pages/landing";
+@import "pages/location";
+@import "pages/notification";
+@import "pages/order";
+@import "pages/page-list";
+@import "pages/payment";
+@import "pages/pharmacy";
+@import "pages/profile";
+@import "pages/restaurant-app";
+
+/* themes */
+@import "themes/dark";

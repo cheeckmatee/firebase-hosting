@@ -1,0 +1,177 @@
+/*=============================
+    Add-cart CSS start
+===============================*/
+.apply-coupon {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px dashed rgba(var(--light-text), 1);
+    background-color: rgba(var(--box-bg), 1);
+    border-radius: 10px;
+
+    .coupon-code {
+        color: rgba(var(--success-color), 1);
+        padding-top: 5px;
+    }
+
+    i {
+        color: rgba(var(--light-text), 1);
+        font-size: 20px;
+    }
+}
+
+.bill-details {
+    position: relative;
+
+    .total-detail {
+        position: relative;
+        background-color: rgba(var(--box-bg), 1);
+        padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+        border-radius: 10px 10px 0px 0px;
+        margin-bottom: 0;
+
+        .sub-total {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h5 {
+            color: rgba(var(--dark-text), 1);
+        }
+
+        .free {
+            color: rgba(var(--theme-color), 1);
+            position: absolute;
+            top: 54px;
+            right: 20px;
+
+            [dir="rtl"] & {
+                right: unset;
+                left: 20px;
+            }
+        }
+
+        .delivery-info {
+            width: 70%;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .grand-total {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px dashed rgba(var(--black), 0.22);
+            padding: 10px 0 0;
+
+            h5 {
+                color: rgba(var(--dark-text), 1);
+            }
+
+            .amount {
+                color: rgba(var(--theme-color), 1);
+            }
+        }
+
+        .dots-design {
+            position: absolute;
+            bottom: -1px;
+            width: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
+
+    p {
+        border-top: 1px dashed rgba(var(--dashed-line), 1);
+        padding: 15px 0 0;
+    }
+
+    .delivery-time {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            border: 1px dashed rgba(var(--dashed-line), 1);
+            bottom: -4px;
+            overflow: hidden;
+            z-index: 1;
+            right: 0;
+        }
+
+        .delivery-line {
+            width: 100%;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: rgba(var(--light-text), 1);
+            border-top: none;
+            overflow: hidden;
+            background-color: rgba(var(--white), 1);
+        }
+
+        .delivery-bike {
+            position: relative;
+            width: 67px;
+            height: 49px;
+            bottom: 0;
+            right: 0;
+
+            [dir="rtl"] & {
+                left: 0;
+                right: unset;
+            }
+        }
+    }
+}
+
+.cart-add-box {
+    display: flex;
+    gap: 10px;
+    padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+    background: rgba(var(--white), 1);
+    border: 1px solid rgba(var(--black), 0.05);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+
+    .add-img {
+        .img {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+        }
+    }
+
+    .add-content {
+        width: calc(100% - 55px - 10px);
+        position: relative;
+
+        .address {
+            width: 70%;
+            line-height: 1.2;
+        }
+
+        .change-add {
+            color: rgba(var(--theme-color), 1);
+            font-size: 13px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            [dir="rtl"] & {
+                left: 0;
+                right: unset;
+            }
+        }
+    }
+}

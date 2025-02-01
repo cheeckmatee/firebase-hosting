@@ -1,0 +1,292 @@
+/*=====================
+    Dark CSS start
+==========================*/
+body {
+    &.dark {
+        .navbar-menu {
+            border-top: 1px solid rgba(var(--light-text), 0.2);
+        }
+
+        .location {
+            .location-img {
+                filter: invert(0.85);
+            }
+        }
+
+        .categories {
+            .food-categories {
+                background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+            }
+        }
+
+        .products {
+            .product-box {
+                background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+                border: none;
+                margin: 1px;
+                z-index: 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 8px;
+                    padding: 1px;
+                    background: linear-gradient(
+                        161.57deg,
+                        rgba(255, 255, 255, 0.2) -44.12%,
+                        rgba(255, 255, 255, 0) 99.26%
+                    );
+                    -webkit-mask:
+                        -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(var(--white), 1)))
+                            content-box,
+                        -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(var(--white), 1)));
+                    -webkit-mask:
+                        linear-gradient(rgba(var(--white), 1) 0 0) content-box,
+                        linear-gradient(rgba(var(--white), 1) 0 0);
+                    -webkit-mask-composite: xor;
+                    z-index: -1;
+                }
+            }
+        }
+        .option-accordion {
+            .accordion-item {
+                .accordion-header {
+                    .accordion-button {
+                        &::after {
+                            filter: contrast(0);
+                        }
+                    }
+                }
+                .currency {
+                    .currency-listing {
+                        li {
+                            color: rgba(var(--dark-text), 1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .brands-logo {
+            .food-brands {
+                border: 1px solid transparent;
+                position: relative;
+                border-radius: 100%;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 100%;
+                    padding: 1px;
+                    background: linear-gradient(
+                        161.57deg,
+                        rgba(255, 255, 255, 0.2) -44.12%,
+                        rgba(255, 255, 255, 0) 99.26%
+                    );
+                    -webkit-mask:
+                        -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(var(--white), 1)))
+                            content-box,
+                        -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(var(--white), 1)));
+                    -webkit-mask:
+                        linear-gradient(rgba(var(--white), 1) 0 0) content-box,
+                        linear-gradient(rgba(var(--white), 1) 0 0);
+                    -webkit-mask-composite: xor;
+                }
+            }
+        }
+
+        .search-filter {
+            .footer-modal {
+                border: 1px solid rgba(var(--light-text), 0.5);
+            }
+        }
+
+        .btn-close {
+            filter: invert(1);
+        }
+
+        .form-check-input {
+            background-color: transparent;
+            border: 1px solid rgba(var(--light-text), 1);
+        }
+
+        .form-control {
+            background-color: rgba(var(--box-bg), 1);
+            color: rgba(var(--light-text), 1);
+        }
+
+        .bill-details {
+            .total-detail {
+                .dots-design {
+                    filter: invert(0.85);
+                }
+            }
+        }
+
+        .address-list {
+            li {
+                .address-icon {
+                    border: 1px solid rgba(var(--light-text), 1);
+                    background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+                }
+
+                .address-content {
+                    background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+                }
+            }
+        }
+
+        .modal {
+            .modal-dialog {
+                .modal-content {
+                    background-color: rgba(var(--white), 1);
+                }
+            }
+        }
+
+        .order-tracking {
+            background-color: rgba(var(--box-bg), 1);
+        }
+
+        .coupon-box {
+            .coupon-left {
+                filter: invert(0.85);
+            }
+
+            .coupon-right {
+                filter: invert(0.85);
+            }
+        }
+
+        .voucher-box {
+            .voucher-discount {
+                .top-vector {
+                    filter: invert(0.85);
+                }
+            }
+
+            &::after {
+                box-shadow: none;
+            }
+
+            &::before {
+                box-shadow: none;
+            }
+        }
+
+        .payment-list {
+            .payment-card-box {
+                .payment-detail {
+                    .add-img {
+                        .img1 {
+                            width: 35px;
+                            height: 30px;
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .confirm-title {
+            .for-dark {
+                display: block;
+            }
+
+            .for-light {
+                display: none;
+            }
+        }
+
+        .profile-list {
+            li {
+                .profile-box {
+                    background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+                    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+
+                    .profile-icon {
+                        background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+
+                        .icon {
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .otp-form {
+            .form-input {
+                .form-control {
+                    background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+                }
+            }
+        }
+
+        .search-section {
+            .form-group {
+                .filter-button {
+                    background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+                }
+            }
+        }
+
+        .auth-form {
+            .form-group {
+                .form-input {
+                    .form-control {
+                        background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+                    }
+                }
+
+                .dropdown {
+                    .dropdown-menu {
+                        li {
+                            .dropdown-item {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .dark-border-gradient {
+            border: 1px solid transparent;
+            position: relative;
+            padding: 1px;
+            border-radius: 6px;
+
+            .form-control,
+            .dropdown-toggle {
+                background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+                z-index: 1;
+                position: relative;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 6px;
+                padding: 1px;
+                background: linear-gradient(
+                    161.57deg,
+                    rgba(255, 255, 255, 0.53) -44.12%,
+                    rgba(255, 255, 255, 0) 99.26%
+                );
+                -webkit-mask:
+                    linear-gradient(rgba(var(--white), 1) 0 0) content-box,
+                    linear-gradient(rgba(var(--white), 1) 0 0);
+                -webkit-mask-composite: xor;
+            }
+        }
+
+        .vertical-product-box {
+            background: linear-gradient(149.22deg, #3c3c3c -9.22%, #2a2a2a 114.95%);
+            border: 1px solid rgba(245, 245, 245, 0.06);
+        }
+    }
+}

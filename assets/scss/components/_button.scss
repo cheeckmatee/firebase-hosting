@@ -1,0 +1,72 @@
+/*=====================
+    Button CSS start
+==========================*/
+.btn {
+  margin-top: 30px;
+  padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
+
+  &-inline {
+    padding-inline: 15px;
+  }
+
+  &:active {
+    background-color: rgba(var(--theme-color), 1);
+    color: rgba(var(--white), 1);
+    border: 1px solid rgba(var(--theme-color), 1);
+  }
+}
+
+.theme-btn {
+  background-color: rgba(var(--theme-color), 1);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+  border-radius: 6px;
+
+  &:hover {
+    background-color: rgba(var(--theme-color), 1);
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: rgba(var(--theme-color), 1);
+    color: rgba(var(--white), 1);
+    border: 1px solid rgba(var(--theme-color), 1);
+  }
+}
+
+.gray-btn {
+  background-color: rgba(var(--box-bg), 1);
+  color: rgba(var(--light-text), 1);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  &:active {
+    border: none;
+  }
+
+  &:hover {
+    background-color: rgba(var(--box-bg), 1);
+    color: rgba(var(--light-text), 1);
+  }
+}
+
+.btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(var(--light-text), 1);
+
+  &:hover {
+    color: rgba(var(--light-text), 1);
+  }
+}

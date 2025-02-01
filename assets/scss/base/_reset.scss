@@ -1,0 +1,84 @@
+/*=====================
+    Reset CSS start
+==========================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  &[type="number"] {
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.custom-container {
+  padding: 0 20px;
+  background-color: rgba(var(--white), 1);
+}
+
+section,
+.section-t-space {
+  padding-top: 20px;
+}
+
+.section-b-space {
+  padding-bottom: 20px;
+}
+
+.section-lg-t-space {
+  padding-top: 50px;
+}
+
+.section-lg-b-space {
+  padding-bottom: 50px;
+}
+
+.panel-space {
+  padding-top: 80px !important;
+}
+.white-color {
+  color: rgba(var(--white), 1) !important;
+}
+
+.theme-color {
+  color: rgba(var(--theme-color), 1) !important;
+}
+
+.dark-text {
+  color: rgba(var(--dark-text), 1) !important;
+}
+
+.light-text {
+  color: rgba(var(--light-text), 1) !important;
+}
+
+.error-color {
+  color: rgba(var(--error-color), 1) !important;
+}
+
+.success-color {
+  color: rgba(var(--success-color), 1) !important;
+}
+.rate-color {
+  color: rgba(var(--rate-color), 1) !important;
+}
+.box-bg {
+  background-color: rgba(var(--box-bg), 1) !important;
+}
+
+.accent-color {
+  color: rgba(var(--accent-color), 1) !important;
+}
+
+.swiper {
+  [dir="rtl"] & {
+    direction: ltr;
+  }
+}

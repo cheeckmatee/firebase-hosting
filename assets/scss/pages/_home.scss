@@ -1,0 +1,137 @@
+/*=====================
+    home Page CSS
+==========================*/
+.search-section {
+  .form-group {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+    .form-input {
+      position: relative;
+      width: calc(100% - 40px - 10px);
+
+      .search-icon {
+        font-size: 20px;
+
+        &::after {
+          display: none !important;
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        color: rgba(var(--light-text), 1);
+        padding-right: 10px;
+        font-size: 14px;
+
+        [dir="rtl"] & {
+          left: unset;
+          right: 12px;
+          padding-right: unset;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .filter-button {
+      padding: 0;
+      background-color: rgba(var(--box-bg), 1);
+      backdrop-filter: blur(2px);
+      border-radius: 6px;
+      border: none;
+      color: rgba(var(--white), 1);
+      width: auto;
+      height: auto;
+      padding: 15px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        color: rgba(132, 132, 133, 1);
+        font-size: 15px;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.search-form {
+  .form-group {
+    .form-input {
+      .form-control {
+        padding: 8px 8px 8px 45px;
+
+        [dir="rtl"] & {
+          padding: 8px 45px 8px 8px;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      i {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.brands-logo {
+  .food-brands {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 100%;
+    margin: 0 auto;
+  }
+
+  h4 {
+    margin-top: 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgba(var(--dark-text), 1);
+  }
+}
+
+.empty-section {
+  h2 {
+    width: 90%;
+    font-size: 45px;
+    font-weight: 800;
+    color: rgba(var(--dark-text), 0.5);
+  }
+
+  h5 {
+    margin: 15px 0;
+    color: rgba(var(--light-text), 1);
+    text-align: left;
+
+    [dir="rtl"] & {
+      text-align: right;
+    }
+  }
+}
+
+.banner-section {
+  .banner-img {
+    width: 100%;
+  }
+}

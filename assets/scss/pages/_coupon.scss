@@ -1,0 +1,313 @@
+/*=====================
+    voucher CSS start
+==========================*/
+.coupon-box {
+    position: relative;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+
+    .coupon-left {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 111%;
+        transform: translateY(-50%);
+
+        [dir="rtl"] & {
+            left: unset;
+            right: -1px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+    }
+
+    .coupon-right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 111%;
+        transform: translateY(-50%);
+
+        [dir="rtl"] & {
+            right: unset;
+            left: -1px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+    }
+
+    .coupon-discount {
+        position: relative;
+        writing-mode: vertical-rl;
+        text-align: center;
+        padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+        color: rgba(255, 255, 255, 1);
+        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -7px;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: rgba(var(--white), 1);
+            transform: translateY(-50%);
+
+            [dir="rtl"] & {
+                left: -7px;
+                right: unset;
+            }
+        }
+
+        &.color-1 {
+            background-color: rgba(var(--light-text), 1);
+        }
+
+        &.color-2 {
+            background-color: rgba(30, 60, 110, 1);
+        }
+
+        &.color-3 {
+            background-color: rgba(173, 110, 51, 1);
+        }
+
+        &.color-4 {
+            background-color: rgba(123, 51, 157, 1);
+        }
+    }
+
+    .coupon-details {
+        width: calc(100% - 53px);
+        padding: 0 calc(20px + 5 * (100vw - 320px) / 1600) 0 calc(15px + 10 * (100vw - 320px) / 1600);
+
+        .coupon-content {
+            padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 0 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+
+            .coupon-name {
+                display: flex;
+                gap: 10px;
+
+                .coupon-img {
+                    width: 42px;
+                    height: 42px;
+                    object-fit: contain;
+                    padding: 7px;
+                    background-color: rgba(var(--box-bg), 1);
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            color: rgba(var(--light-text), 1);
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(var(--dashed-line), 1);
+
+            span {
+                color: rgba(var(--dark-text), 1);
+                font-weight: 500;
+            }
+        }
+
+        .coupon-apply {
+            padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 0;
+            display: flex;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .unlock {
+                width: 65%;
+                color: rgba(var(--dark-text), 1);
+            }
+        }
+    }
+}
+
+.voucher-box {
+    position: relative;
+    background: rgba(var(--white), 1);
+    border: 1px solid rgba(var(--black), 0.05);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        border-radius: 100%;
+        background: rgba(var(--white), 1);
+        left: -12px;
+        bottom: 25%;
+        box-shadow: inset 0px 2px 12px 0px rgba(217, 217, 217, 1);
+        z-index: 1;
+        display: block;
+
+        [dir="rtl"] & {
+            right: -12px;
+            left: unset;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        border-radius: 100%;
+        background: rgba(var(--white), 1);
+        right: -12px;
+        bottom: 25%;
+        box-shadow: inset 0px 2px 12px 0px rgba(217, 217, 217, 1);
+        z-index: 1;
+        display: block;
+
+        [dir="rtl"] & {
+            left: -12px;
+            right: unset;
+        }
+    }
+
+    .l-vector {
+        position: absolute;
+        left: -5px;
+        bottom: 60px;
+        height: 20px;
+        width: 20px;
+        z-index: 1;
+
+        [dir="rtl"] & {
+            left: unset;
+            right: -5px;
+        }
+    }
+
+    .r-vector {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        right: -5px;
+        bottom: 60px;
+        z-index: 1;
+        transform: rotate(180deg);
+
+        [dir="rtl"] & {
+            left: -5px;
+            right: unset;
+        }
+    }
+
+    .voucher-img {
+        text-align: center;
+        padding-top: 12px;
+
+        .voucher-icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+    }
+
+    .voucher-content {
+        padding: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
+
+        h5 {
+            font-weight: 600;
+            color: rgba(var(--dark-text), 1);
+            margin-top: 12px;
+        }
+
+        p {
+            color: rgba(var(--light-text), 1);
+            margin-top: 4px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .voucher-discount {
+        position: relative;
+        width: 100%;
+        height: 70px;
+        background: rgba(53, 121, 42, 1);
+        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0 8px 8px;
+
+        &.color-1 {
+            background-color: rgba(37, 131, 125, 1);
+        }
+
+        &.color-2 {
+            background-color: rgba(30, 60, 110, 1);
+        }
+
+        &.color-3 {
+            background-color: rgba(173, 110, 51, 1);
+        }
+
+        &.color-4 {
+            background-color: rgba(123, 51, 157, 1);
+        }
+
+        &.color-5 {
+            background-color: rgba(53, 121, 42, 1);
+        }
+
+        .top-vector {
+            position: absolute;
+            width: 90%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2 {
+            color: rgba(225, 225, 225, 1);
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+}
+
+.expired-box {
+    position: relative;
+
+    .expired-tag {
+        position: absolute;
+        background-color: rgba(var(--theme-color), 0.6);
+        backdrop-filter: blur(3px);
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 1;
+        height: 34px;
+
+        p {
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            color: rgba(var(--dark-text), 1);
+        }
+    }
+
+    .expired-voucher {
+        position: relative;
+        filter: grayscale(100%);
+    }
+}
