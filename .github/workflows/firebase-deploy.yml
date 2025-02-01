@@ -12,20 +12,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Check if ZIP file exists
-        run: ls -l && test -f assets.zip && echo "ZIP file exists" || echo "No ZIP file found"
+      - name: Setup Firebase CLI
+        run: npm install -g firebase-tools
 
-      - name: Install unzip (if needed)
-        run: sudo apt-get install unzip -y
+      - name: Unzip assets
+        run: unzip -o assets.zip -d public/
 
-      - name: Extract assets.zip
-        run: unzip -o assets.zip -d public || echo "Extraction failed"
-
-      - name: Move extracted files to public directory (if needed)
-        run: mv public/assets/* public/ || echo "No subdirectory found"
-
-      - name: Delete ZIP file
-        run: rm assets.zip
+      - name: Delete ZIP file (اختياري)
+        run: rm -f assets.zip || echo "No ZIP file to delete"
 
       - name: Deploy to Firebase Hosting
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
