@@ -1,0 +1,99 @@
+/*=====================
+    landing Page CSS
+==========================*/
+.main-categories-box {
+    padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+    border: 1px solid rgba(var(--box-bg), 1);
+    border-radius: 5px;
+
+    .main-categories-img {
+        text-align: center;
+        .img {
+            width: 100%;
+            height: 40px;
+            object-fit: contain;
+            padding-bottom: 10px;
+        }
+    }
+
+    h6 {
+        border-top: 1px solid rgba(var(--box-bg), 1);
+        padding-top: 10px;
+        text-align: center;
+    }
+}
+
+.offer-deal-box {
+    background-color: rgba(var(--box-bg), 1);
+    padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+    .deal-img {
+        height: 25px;
+        width: 25px;
+    }
+    h5 {
+        font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+        color: rgba(var(--dark-text), 1);
+    }
+}
+
+.main-banner-box {
+    cursor: pointer;
+    .banner-img {
+        border-radius: 12px 12px 0 0;
+    }
+    .main-banner-details {
+        margin-top: 4px;
+        padding: 12px;
+        border-radius: 0 0 12px 12px;
+        border: 1px solid rgba(var(--box-bg), 1);
+        h3 {
+            font-weight: 500;
+            color: rgba(var(--dark-text), 1);
+        }
+        h5 {
+            margin-top: 4px;
+            font-size: 500;
+            color: rgba(var(--light-text), 1);
+            padding-bottom: 12px;
+            span {
+                color: rgba(var(--theme-color), 1);
+            }
+        }
+        .order-part {
+            padding-top: 12px;
+            border-top: 1px dashed rgba(var(--light-text), 0.3);
+            h5 {
+                font-weight: 500;
+                color: rgba(var(--dark-text), 1);
+            }
+        }
+    }
+}
+
+.main-product-card {
+    border-radius: 6px;
+    border: 1px solid rgba(var(--box-bg), 1);
+    box-shadow: 0px 2px 15px 0px rgba(var(--black), 0.04);
+    [dir="rtl"] & {
+        direction: rtl;
+    }
+    .product-card-img {
+        border-radius: 6px 6px 0 0;
+    }
+    .card-body {
+        padding: 12px;
+        .card-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .add-btn {
+            padding: 5px 15px;
+        }
+    }
+}

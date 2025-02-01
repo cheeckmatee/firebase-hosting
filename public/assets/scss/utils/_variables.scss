@@ -1,0 +1,38 @@
+/*========================
+    Variable CSS start
+==========================*/
+/* font family */
+$Metropolis: "Metropolis", sans-serif;
+
+/* color variables */
+:root {
+  --theme-color: 255, 141, 47;
+  --light-theme-color: 255, 240, 227;
+  --white: 255, 255, 255;
+  --black: 0, 0, 0;
+  --dark-text: 65, 68, 73;
+  --light-text: 141, 143, 145;
+  --success-color: 39, 125, 42;
+  --error-color: 245, 58, 58;
+  --accent-color: 58, 109, 229;
+  --rate-color: 255, 185, 49;
+  --box-bg: 245, 245, 245;
+  --dashed-line: 237, 237, 237;
+}
+
+.dark {
+  --white: 40, 40, 40;
+  --black: 255, 255, 255;
+  --dark-text: 255, 255, 255;
+  --light-text: 141, 143, 145;
+  --box-bg: 60, 60, 60;
+  --dashed-line: 82, 82, 82;
+}
+
+.grocery-color {
+  --theme-color: 59, 193, 142;
+}
+
+.pharmacy-color {
+  --theme-color: 0, 136, 147;
+}

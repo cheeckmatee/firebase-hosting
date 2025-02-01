@@ -1,0 +1,55 @@
+/*=====================
+    Empty Tab CSS start
+==========================*/
+.empty-tab {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  h2 {
+    margin-top: 40px;
+    color: rgba(var(--dark-text), 1);
+  }
+
+  h5 {
+    color: rgba(var(--light-text), 1);
+    line-height: 1.3;
+    font-weight: 400;
+  }
+  p {
+    margin-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 1.5;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(var(--light-text), 1);
+  }
+  .empty-btn {
+    margin-top: 0;
+    display: block;
+    padding: 15px !important;
+    width: 100% !important;
+  }
+
+  .try-btn {
+    padding: 10px 30px !important;
+  }
+
+  .empty-bell {
+    margin-top: 100px;
+  }
+
+  .empty-cart {
+    margin-top: 70px;
+  }
+
+  .empty-search {
+    margin-top: 90px;
+  }
+
+  .empty-wishlist {
+    margin-top: 70px;
+  }
+}

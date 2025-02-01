@@ -1,0 +1,106 @@
+.pharmacy-categories-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(var(--light-text), 1);
+    background-color: rgba(var(--box-bg), 1);
+    border-radius: 100%;
+    margin: 0 auto;
+
+    &.active {
+        color: rgba(var(--white), 1);
+        background-color: rgba(var(--theme-color), 0.1);
+        h6 {
+            border-left: 1px solid rgba(var(--white), 1);
+        }
+    }
+}
+.pharmacy-banner-img {
+    border-radius: 6px;
+}
+
+.pharmacy-product-box {
+    padding: 0;
+    position: relative;
+    .ratings {
+        position: absolute;
+        top: 15px;
+        right: 12px;
+        [dir="rtl"] & {
+            left: 12px;
+            right: unset;
+        }
+    }
+    .grocery-product-details {
+        background-color: rgba(var(--box-bg), 1);
+        padding: 8px 12px;
+        .cart-btn {
+            background-color: rgba(var(--theme-color), 1);
+            padding: 5px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.pharmacy-horizontal-product-box {
+    background-color: rgba(var(--box-bg), 1);
+    li {
+        border-bottom: 1px dashed rgba(var(--black), 0.06);
+        gap: 12px;
+        .horizontal-product-img {
+            padding: 8px;
+            background-color: rgba(var(--white), 1);
+            border-radius: 4px;
+        }
+
+        h5 {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.pharmacy-horizontal-product-box2 {
+    border-radius: 4px;
+    border: 1px solid rgba(var(--box-bg), 1);
+    background: rgba(var(--white), 1);
+    box-shadow: 0px 2px 15px 0px rgba(var(--black), 0.04);
+    display: flex;
+    align-items: unset;
+    padding: 0;
+    gap: 0;
+    height: 100%;
+    [dir="rtl"] & {
+        direction: rtl;
+    }
+    .horizontal-product-img {
+        .img {
+            width: 80px;
+            height: 100%;
+        }
+    }
+    .horizontal-product-details {
+        position: relative;
+        width: calc(100% - 80px);
+        padding: 12px;
+        .add-btn {
+            right: 15px;
+            bottom: 15px;
+            [dir="rtl"] & {
+                left: 15px;
+                right: unset;
+            }
+        }
+    }
+}
+.discount-banner {
+    border-radius: 6px;
+}

@@ -1,0 +1,58 @@
+/*=============================
+    Location CSS start
+===============================*/
+.location-map {
+    border: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.delivery-root {
+    position: relative;
+    border: 0;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: -16px;
+    > div {
+        height: 100%;
+    }
+}
+
+.location-popup {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    max-width: 600px;
+    background: linear-gradient(180deg, #414449 1.31%, #1f1f1f 101.06%);
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.14);
+    border-radius: 20px 20px 0px 0px;
+    height: auto;
+    padding: 20px;
+
+    .change-location {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        i {
+            color: rgba(var(--theme-color), 1);
+            font-size: 18px;
+        }
+    }
+
+    .address {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .delivery-btn {
+        font-size: 16px;
+    }
+}

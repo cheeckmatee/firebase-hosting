@@ -1,0 +1,157 @@
+/*=====================
+    tab CSS start
+==========================*/
+.nav {
+    border-bottom: 1px solid rgba(var(--dashed-line), 0.5);
+    gap: 5px;
+
+    .nav-item {
+        .nav-link {
+            color: rgba(var(--light-text), 1);
+            position: relative;
+            padding: 15px;
+
+            &.active {
+                color: rgba(var(--theme-color), 1);
+                background-color: rgba(var(--white), 1);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 45%;
+                    transform: translate(-50%);
+                    width: 5px;
+                    height: 5px;
+                    background-color: rgba(var(--theme-color), 1);
+                    border-radius: 100%;
+                }
+
+                .nav-link {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(-50%);
+                        width: 5px;
+                        height: 5px;
+                        background-color: rgba(var(--theme-color), 1);
+                        border-radius: 100%;
+
+                        [dir="rtl"] & {
+                            left: unset;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-tab {
+}
+
+.tab-style1 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
+    overflow-x: auto;
+
+    .nav-item {
+        color: rgba(var(--white), 0.1);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        cursor: pointer;
+        border-radius: 0px;
+        transition: all 0.5s ease-in-out;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(var(--white), 0.1);
+
+        .nav-link {
+            width: 100%;
+            padding-top: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1;
+            white-space: nowrap;
+            color: rgba(var(--light-text), 1);
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 1px solid rgba(var(--box-bg), 0.1);
+
+            &:hover {
+                border-left: none;
+                border-right: none;
+                border-top: none;
+            }
+
+            &:focus {
+                border-color: transparent;
+            }
+
+            &.active {
+                background-color: transparent;
+                color: rgba(var(--theme-color), 1);
+                border-left: none;
+                border-right: none;
+                border-top: none;
+                border-bottom: 2px solid rgba(var(--theme-color), 1);
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 100%;
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+.tab-style2 {
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 30px auto 0;
+    border-radius: 6px;
+    overflow: hidden;
+    gap: 20px;
+    display: flex;
+    border: none;
+
+    .nav-item {
+        border-radius: 10px;
+        background-color: rgba(var(--box-bg), 1);
+
+        .nav-link {
+            width: 100%;
+            padding: 12px;
+            font-weight: 500;
+            line-height: 1;
+            font-size: 14px;
+            white-space: nowrap;
+            color: rgba(var(--light-text), 1);
+
+            &.active {
+                background-color: rgba(var(--theme-color), 1);
+                color: rgba(255, 255, 255, 1);
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                }
+
+                &::after {
+                    content: none;
+                }
+            }
+            &:hover {
+                color: rgba(var(--light-text), 1);
+            }
+        }
+    }
+}

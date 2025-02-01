@@ -1,0 +1,31 @@
+/*=====================
+    Title CSS start
+==========================*/
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+
+  h3 {
+    color: rgba(var(--dark-text), 1);
+    font-weight: 600;
+  }
+
+  a {
+    color: rgba(var(--theme-color), 1);
+  }
+  .add-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(var(--theme-color), 1);
+    border-radius: 6px;
+    .icon {
+      line-height: 1;
+      font-size: 20px;
+      color: rgba(var(--theme-color), 1);
+    }
+  }
+}

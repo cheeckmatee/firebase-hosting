@@ -1,0 +1,217 @@
+/*=====================
+    accordion CSS start
+==========================*/
+.food-accordion {
+    .accordion-item {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(var(--black), 0.05);
+        z-index: -1;
+
+        .accordion-header {
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                border-bottom: 1px dashed rgba(var(--dashed-line), 1);
+                width: 60px;
+            }
+
+            .accordion-button {
+                padding: 16px 0;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(var(--dark-text), 1);
+                background-color: rgba(var(--white), 1);
+
+                &::after {
+                    content: "\EA4E";
+                    font-family: remixicon !important;
+                    width: auto;
+                    height: auto;
+                    background: none;
+                    font-size: 24px;
+                    line-height: 1;
+                    background-image: none;
+                    transform: none;
+                    margin-left: auto;
+                    margin-right: unset;
+
+                    [dir="rtl"] & {
+                        margin-left: unset;
+                        margin-right: auto;
+                    }
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &:not(.collapsed) {
+                    background: none;
+                    color: rgba(var(--dark-text), 1);
+                    font-weight: 400;
+                    font-size: 14px;
+
+                    &::after {
+                        content: "\EA78";
+                        font-family: remixicon !important;
+                        width: auto;
+                        height: auto;
+                        background: none;
+                        font-size: 24px;
+                        line-height: 1;
+                        background-image: none;
+                        transform: none;
+                        margin-left: auto;
+
+                        [dir="rtl"] & {
+                            margin-left: unset;
+                            margin-right: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        .accordion-body {
+            padding: 20px 0 20px 0;
+        }
+    }
+}
+
+.option-accordion {
+    .accordion-item {
+        background-color: rgba(var(--white), 1);
+        border: 1px solid rgba(var(--black), 0.05);
+        box-shadow: 0px 2px 12px rgba(var(--black), 0.06);
+        border-radius: 8px;
+
+        .accordion-header {
+            position: relative;
+            font-size: 14px;
+            background-color: rgba(var(--white), 1);
+            border: 1px solid rgba(var(--black), 0.05);
+            box-shadow: 0px 2px 12px rgba(var(--black), 0.06);
+            border-radius: 8px;
+
+            .accordion-button {
+                padding: 15px;
+                font-size: 14px;
+                font-weight: 600;
+                color: rgba(var(--dark-text), 1);
+                background-color: rgba(var(--white), 1);
+
+                &::after {
+                    transform: none;
+                    margin-left: auto;
+                    font-weight: normal;
+                    content: "\ea4e";
+                    font-family: remixicon !important;
+                    width: auto;
+                    height: auto;
+                    background: none;
+                    font-size: 24px;
+                    line-height: 1;
+
+                    [dir="rtl"] & {
+                        margin-left: unset;
+                        margin-right: auto;
+                    }
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &:not(.collapsed) {
+                    background: none;
+                    color: rgba(var(--dark-text), 1);
+                    font-weight: 600;
+                    font-size: 14px;
+
+                    &::after {
+                        content: "\EA78";
+                        font-family: remixicon !important;
+                        width: auto;
+                        height: auto;
+                        background: none;
+                        font-size: 24px;
+                        line-height: 1;
+                        background-image: none;
+                        transform: none;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        .accordion-body {
+            padding: 0 15px 12px;
+
+            .form-check {
+                text-align: left;
+                padding: 12px 0;
+                margin: 0;
+                border-bottom: 1px solid rgba(var(--dashed-line), 1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgba(var(--white), 1);
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+
+                .form-check-label {
+                    color: rgba(var(--dark-text), 1);
+                    font-size: 14px;
+                }
+
+                .form-check-input {
+                    box-shadow: none;
+                    float: right;
+                    margin: 0;
+
+                    [dir="rtl"] & {
+                        float: left;
+                    }
+                }
+
+                .form-check-input:checked {
+                    background-color: rgba(var(--theme-color), 1);
+                    border-color: rgba(var(--theme-color), 1);
+                }
+            }
+        }
+
+        .currency {
+            padding: 0 15px 12px 12px;
+
+            [dir="rtl"] & {
+                padding: 0 12px 12px 15px;
+            }
+
+            .currency-listing {
+                li {
+                    display: block;
+                    width: 100%;
+                    padding: 12px 0;
+                    font-weight: 400;
+                    border-bottom: 1px solid rgba(var(--dashed-line), 1);
+
+                    &:last-child {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

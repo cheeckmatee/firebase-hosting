@@ -1,0 +1,134 @@
+/*=====================
+    Typography CSS start
+==========================*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $Metropolis;
+  background-color: rgba(var(--white), 1);
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    scrollbar-width: none;
+    scrollbar-color: #000000;
+    width: 1px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 0px;
+    border: 3px solid #ffffff;
+  }
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+h6 {
+  font-size: calc(12px + (13 - 12) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+// const gulp = require("gulp");
+// const sass = require("gulp-sass")(require("sass"));
+// const autoprefixer = require("gulp-autoprefixer");
+// const sourcemaps = require("gulp-sourcemaps");
+// const browserSync = require("browser-sync").create();
+// const feather = require("feather-icons");
+
+// //scss to css
+// function style() {
+//   return gulp
+//     .src("landing/assets/scss/**/*.scss", {
+//       sourcemaps: true,
+//     })
+//     .pipe(
+//       sass({
+//         // outputStyle: 'compressed'
+//       }).on("error", sass.logError)
+//     )
+//     .pipe(autoprefixer("last 2 versions"))
+//     .pipe(
+//       gulp.dest("landing/assets/css", {
+//         sourcemaps: ".",
+//       })
+//     )
+//     .pipe(
+//       browserSync.reload({
+//         stream: true,
+//       })
+//     );
+// }
+// gulp;
+
+// // Watch function
+// function watch() {
+//   browserSync.init({
+//     proxy: "localhost/zomo/landing/index.html",
+//   });
+//   gulp.watch("landing/assets/scss/**/*.scss", style);
+//   gulp.watch("*.html").on("change", browserSync.reload);
+//   gulp.watch("landing/assets/css/*.css").on("change", browserSync.reload);
+// }
+
+// exports.style = style;
+// exports.watch = watch;
+
+// const build = gulp.series(watch);
+// gulp.task("default", build, "browser-sync");

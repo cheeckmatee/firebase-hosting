@@ -1,0 +1,32 @@
+/*=====================
+  Slider CSS start
+==========================*/
+.swiper-3d {
+    .swiper-slide-shadow-left {
+        background-image: none;
+    }
+
+    .swiper-slide-shadow-right {
+        background-image: none;
+    }
+}
+
+.swiper-wrapper {
+    direction: ltr;
+}
+
+.offer-wrapper {
+    .swiper-slide {
+        img {
+            transform: scale(0.8);
+            opacity: 0.4;
+        }
+    }
+
+    .swiper-slide-active {
+        img {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
